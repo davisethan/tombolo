@@ -14,8 +14,9 @@ jobs:
         working-directory: python
     steps:
       - uses: actions/checkout@v4
-      - run: uvx ruff check .
-      - run: uvx ruff format --check .
+      - run: pip install ruff
+      - run: ruff check .
+      - run: ruff format --check .
 
   r:
     runs-on: ubuntu-latest
