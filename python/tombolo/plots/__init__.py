@@ -11,5 +11,5 @@ __all__ = [
     ranking_plot.__name__,
     heterogeneity_table.__name__,
     prediction_table.__name__,
-    convergence_table.__name__
+    convergence_table.__name__,
 ]

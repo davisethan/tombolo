@@ -13,10 +13,10 @@ _schema = {
             "properties": {
                 "rhat_max": {"type": "number"},
                 "ess_bulk_min": {"type": "number"},
-                "ess_tail_min": {"type": "number"}
-            }
+                "ess_tail_min": {"type": "number"},
+            },
         }
-    }
+    },
 }
 
 
