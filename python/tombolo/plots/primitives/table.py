@@ -36,7 +36,7 @@ def _dataframe(data: dict) -> pd.DataFrame:
     return pd.DataFrame([d])
 
 
-def table(data: dict) -> plt.Figure:
+def _table(data: dict) -> plt.Figure:
     df = _dataframe(data)
     df.insert(0, "_idx", "")
 
