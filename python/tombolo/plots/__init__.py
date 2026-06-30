@@ -1,6 +1,15 @@
-from .barh import barh
-from .forest import forest
-from .matrix import matrix
-from .table import table
+from .league_table import league_table
+from .forest_plot import forest_plot
+from .ranking_plot import ranking_plot
+from .heterogeneity_table import heterogeneity_table
+from .prediction_table import prediction_table
+from .convergence_table import convergence_table
 
-__all__ = [barh.__name__, forest.__name__, matrix.__name__, table.__name__]
+__all__ = [
+    league_table.__name__,
+    forest_plot.__name__,
+    ranking_plot.__name__,
+    heterogeneity_table.__name__,
+    prediction_table.__name__,
+    convergence_table.__name__
+]

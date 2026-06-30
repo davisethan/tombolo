@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 
-def barh(data: dict) -> plt.Figure:
+def _barh(data: dict) -> plt.Figure:
     pipelines = sorted(data, key=data.get)
     values = [data[p] for p in pipelines]
 

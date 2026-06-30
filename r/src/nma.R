@@ -24,7 +24,7 @@ nma <- function(df, greater_is_better) {
   small_values <- if (greater_is_better) "bad" else "good"
 
   list(
-    p_scores = as.list(netrank(m, small.values = small_values)$Pscore.random),
+    ranking = as.list(netrank(m, small.values = small_values)$Pscore.random),
     league = list(
       md = named_matrix(replace(m$TE.random, diag(nrow(m$TE.random)) == 1, NA)),
       lower = named_matrix(replace(m$lower.random, diag(nrow(m$lower.random)) == 1, NA)),

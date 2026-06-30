@@ -29,7 +29,7 @@ bnma <- function(df, greater_is_better) {
   rel <- relative.effect.table(results)
 
   list(
-    sucra = as.list(sucra),
+    ranking = as.list(sucra),
     league = list(
       md = named_matrix(t(rel[, , "50%"])),
       lower = named_matrix(t(rel[, , "2.5%"])),

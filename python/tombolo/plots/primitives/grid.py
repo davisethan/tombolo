@@ -20,7 +20,7 @@ def _cell(data, row, col):
     return "\n".join(arr)
 
 
-def matrix(data: dict) -> plt.Figure:
+def _grid(data: dict) -> plt.Figure:
     pipelines = list(next(iter(data.values())).keys())
     n = len(pipelines)
 
