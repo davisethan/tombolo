@@ -5,7 +5,7 @@ source("bnma.R")
 handlers <- list(nma = nma, bnma = bnma)
 
 req <- tryCatch(
-  fromJSON(readLines(stdin(), warn = FALSE)),
+  fromJSON(readLines(file("stdin"), warn = FALSE)),
   error = function(e) send_error(NULL, -32700L, "Parse error")
 )
 
