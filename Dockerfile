@@ -6,7 +6,7 @@ RUN apt-get update \
         libglpk-dev \
         libcurl4-openssl-dev \
     && mkdir -p /usr/lib/JAGS \
-    && ln -sf /usr/lib/x86_64-linux-gnu/JAGS/modules-4 /usr/lib/JAGS/modules-4 \
+    && ln -sf /usr/lib/$(dpkg-architecture -qDEB_HOST_MULTIARCH)/JAGS/modules-4 /usr/lib/JAGS/modules-4 \
     && rm -rf /var/lib/apt/lists/*
 
 ENV RENV_CONFIG_REPOS_OVERRIDE=https://packagemanager.posit.co/cran/__linux__/noble/latest
