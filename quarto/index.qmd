@@ -1,0 +1,18 @@
+---
+title: "tombolo"
+---
+
+tombolo is a Docker image that runs R statistical methods over JSON-RPC. Send a request on stdin, receive a result on stdout.
+
+```
+docker pull ethandavisecd/tombolo:latest
+```
+
+The primary interface is the [tombolo Python package](https://pypi.org/project/tombolo/), which handles the Docker subprocess and JSON-RPC protocol transparently.
+
+## Methods
+
+| Method | Description |
+|--------|-------------|
+| [nma](nma.qmd) | Frequentist random-effects network meta-analysis via `netmeta` |
+| [bnma](bnma.qmd) | Bayesian random-effects network meta-analysis via `gemtc` and JAGS |

@@ -1,0 +1,14 @@
+project:
+  type: website
+  output-dir: ../docs
+
+website:
+  title: "tombolo"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: nma.qmd
+        text: nma
+      - href: bnma.qmd
+        text: bnma

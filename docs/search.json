@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "tombolo",
+    "section": "",
+    "text": "tombolo is a Docker image that runs R statistical methods over JSON-RPC. Send a request on stdin, receive a result on stdout.\nThe primary interface is the tombolo Python package, which handles the Docker subprocess and JSON-RPC protocol transparently."
+  },
+  {
+    "objectID": "index.html#methods",
+    "href": "index.html#methods",
+    "title": "tombolo",
+    "section": "Methods",
+    "text": "Methods\n\n\n\nMethod\nDescription\n\n\n\n\nnma\nFrequentist random-effects network meta-analysis via netmeta\n\n\nbnma\nBayesian random-effects network meta-analysis via gemtc and JAGS"
+  },
+  {
+    "objectID": "bnma.html",
+    "href": "bnma.html",
+    "title": "bnma",
+    "section": "",
+    "text": "Bayesian random-effects network meta-analysis using the gemtc R package with JAGS (normal likelihood, identity link, 4 chains, 100,000 iterations after 5,000 adaptation steps, thinning of 10)."
+  },
+  {
+    "objectID": "bnma.html#parameters",
+    "href": "bnma.html#parameters",
+    "title": "bnma",
+    "section": "Parameters",
+    "text": "Parameters\n\ndf: Data frame with columns study (chr), treatment (chr), mean (num), std.dev (num), sampleSize (int).\ngreater_is_better: Logical. If TRUE, higher values rank better (e.g. accuracy). If FALSE, lower values rank better (e.g. error rate)."
+  },
+  {
+    "objectID": "bnma.html#return-value",
+    "href": "bnma.html#return-value",
+    "title": "bnma",
+    "section": "Return value",
+    "text": "Return value\nA named list with:\n\nranking: Named numeric vector of SUCRA scores (0–1, higher = better rank).\nleague: Named list with matrices md, lower, upper (posterior median and 95% credible interval bounds). Each is a treatment × treatment matrix.\nheterogeneity: Named list with sd, sd_lower, sd_upper (posterior median and 2.5th–97.5th percentile of the between-study standard deviation).\nconvergence: Named list with rhat_max, ess_bulk_min, ess_tail_min across all model parameters."
+  },
+  {
+    "objectID": "nma.html",
+    "href": "nma.html",
+    "title": "nma",
+    "section": "",
+    "text": "Frequentist random-effects network meta-analysis using the netmeta R package (DL estimator, t-distribution confidence intervals)."
+  },
+  {
+    "objectID": "nma.html#parameters",
+    "href": "nma.html#parameters",
+    "title": "nma",
+    "section": "Parameters",
+    "text": "Parameters\n\ndf: Data frame with columns studlab (chr), treat1 (chr), treat2 (chr), TE (num, mean difference treat1 − treat2), seTE (num).\ngreater_is_better: Logical. If TRUE, higher values rank better (e.g. accuracy). If FALSE, lower values rank better (e.g. error rate)."
+  },
+  {
+    "objectID": "nma.html#return-value",
+    "href": "nma.html#return-value",
+    "title": "nma",
+    "section": "Return value",
+    "text": "Return value\nA named list with:\n\nranking: Named numeric vector of P-scores (0–1, higher = better rank).\nleague: Named list with matrices md, lower, upper, z, pval. Each is a treatment × treatment matrix. Diagonal entries are NA.\nheterogeneity: Named list with tau2, tau, i2, i2_lower, i2_upper, q, q_df, q_pval.\nprediction: Named list with matrices lower and upper (95% prediction intervals). Diagonal entries are NA."
+  }
+]
