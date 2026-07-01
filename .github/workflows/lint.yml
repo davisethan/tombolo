@@ -7,22 +7,8 @@ on:
     branches: [main]
 
 jobs:
-  python:
+  lint:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: python
-    steps:
-      - uses: actions/checkout@v4
-      - run: pip install ruff
-      - run: ruff check .
-      - run: ruff format --check .
-
-  r:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: r
     steps:
       - uses: actions/checkout@v4
       - uses: r-lib/actions/setup-r@v2
