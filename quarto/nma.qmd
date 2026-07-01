@@ -1,0 +1,19 @@
+---
+title: "nma"
+---
+
+Frequentist random-effects network meta-analysis using the [`netmeta`](https://cran.r-project.org/package=netmeta) R package (DL estimator, t-distribution confidence intervals).
+
+## Parameters
+
+- `df`: Data frame with columns `studlab` (chr), `treat1` (chr), `treat2` (chr), `TE` (num, mean difference treat1 − treat2), `seTE` (num).
+- `greater_is_better`: Logical. If `TRUE`, higher values rank better (e.g. accuracy). If `FALSE`, lower values rank better (e.g. error rate).
+
+## Return value
+
+A named list with:
+
+- `ranking`: Named numeric vector of P-scores (0–1, higher = better rank).
+- `league`: Named list with matrices `md`, `lower`, `upper`, `z`, `pval`. Each is a treatment × treatment matrix. Diagonal entries are `NA`.
+- `heterogeneity`: Named list with `tau2`, `tau`, `i2`, `i2_lower`, `i2_upper`, `q`, `q_df`, `q_pval`.
+- `prediction`: Named list with matrices `lower` and `upper` (95% prediction intervals). Diagonal entries are `NA`.

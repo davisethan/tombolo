@@ -1,0 +1,19 @@
+---
+title: "bnma"
+---
+
+Bayesian random-effects network meta-analysis using the [`gemtc`](https://cran.r-project.org/package=gemtc) R package with JAGS (normal likelihood, identity link, 4 chains, 100,000 iterations after 5,000 adaptation steps, thinning of 10).
+
+## Parameters
+
+- `df`: Data frame with columns `study` (chr), `treatment` (chr), `mean` (num), `std.dev` (num), `sampleSize` (int).
+- `greater_is_better`: Logical. If `TRUE`, higher values rank better (e.g. accuracy). If `FALSE`, lower values rank better (e.g. error rate).
+
+## Return value
+
+A named list with:
+
+- `ranking`: Named numeric vector of SUCRA scores (0–1, higher = better rank).
+- `league`: Named list with matrices `md`, `lower`, `upper` (posterior median and 95% credible interval bounds). Each is a treatment × treatment matrix.
+- `heterogeneity`: Named list with `sd`, `sd_lower`, `sd_upper` (posterior median and 2.5th–97.5th percentile of the between-study standard deviation).
+- `convergence`: Named list with `rhat_max`, `ess_bulk_min`, `ess_tail_min` across all model parameters.
