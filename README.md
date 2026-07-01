@@ -36,7 +36,3 @@ See the [documentation](https://ethandavisecd.github.io/tombolo) for parameters 
 |--------|-------------|
 | `nma`  | Frequentist random-effects network meta-analysis via `netmeta` |
 | `bnma` | Bayesian random-effects network meta-analysis via `gemtc` and JAGS |
-
-## License
-
-MIT
