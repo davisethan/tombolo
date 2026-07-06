@@ -30,7 +30,7 @@ echo '<request>' | docker run --rm -i ethandavisecd/tombolo:latest
 
 ## Methods
 
-See the [documentation](https://ethandavisecd.github.io/tombolo) for parameters and return values.
+See the [documentation](https://davisethan.github.io/tombolo) for parameters and return values.
 
 | Method | Description |
 |--------|-------------|
